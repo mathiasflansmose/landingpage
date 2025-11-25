@@ -1,11 +1,38 @@
 version: '3'
 services:
+  # Your Website
   web:
     build: .
     container_name: flask_app
+    restart: unless-stopped
     ports:
       - "80:5000"
     volumes:
       - .:/app
-    restart: unless-stopped
+    networks:
+      - my-net
 
+  # The GitHub Runner
+  runner:
+    image: myoung34/github-runner:latest
+    container_name: github-runner
+    restart: always
+    environment:
+      # Replace with your details
+      - REPO_URL=${GITHUB_REPO_URL}
+      - ACCESS_TOKEN=${GITHUB_TOKEN}
+      
+      # Optional: Naming the runner
+      - RUNNER_NAME=docker-pi-runner
+      - RUNNER_WORKDIR=/tmp/runner
+      # Important: prevent the runner from updating itself (causes restarts)
+      - DISABLE_AUTO_UPDATE=true
+    volumes:
+      # THE MAGIC LINE: Give the runner access to the host Docker engine
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - my-net
+
+networks:
+  my-net:
+    external: true
