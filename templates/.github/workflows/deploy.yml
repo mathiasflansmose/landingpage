@@ -1,0 +1,25 @@
+name: Deploy to Raspberry Pi
+
+# Trigger on push to the main branch
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-and-deploy:
+    # IMPORTANT: This tells GitHub to run this on YOUR Pi, not their cloud.
+    runs-on: self-hosted
+
+    steps:
+      # 1. Check out the latest code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 2. Rebuild and Restart Docker
+      - name: Deploy with Docker Compose
+        run: |
+          # Build the new image and start it in the background
+          docker compose up -d --build
+          
+          # Optional: Remove old, unused images to save SD card space
+          docker image prune -f
