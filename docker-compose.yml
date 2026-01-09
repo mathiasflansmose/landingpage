@@ -35,4 +35,4 @@ services:
 
 networks:
   my-net:
-    external: true
+    driver: bridge
