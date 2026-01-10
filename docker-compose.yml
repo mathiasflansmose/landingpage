@@ -1,4 +1,3 @@
-version: '3'
 services:
   # Your Website
   web:
@@ -7,8 +6,6 @@ services:
     restart: unless-stopped
     ports:
       - "80:5000"
-    volumes:
-      - .:/app
     networks:
       - my-net
 
@@ -18,17 +15,12 @@ services:
     container_name: github-runner
     restart: always
     environment:
-      # Replace with your details
       - REPO_URL=${GITHUB_REPO_URL}
       - ACCESS_TOKEN=${GITHUB_TOKEN}
-      
-      # Optional: Naming the runner
       - RUNNER_NAME=docker-pi-runner
       - RUNNER_WORKDIR=/tmp/runner
-      # Important: prevent the runner from updating itself (causes restarts)
       - DISABLE_AUTO_UPDATE=true
     volumes:
-      # THE MAGIC LINE: Give the runner access to the host Docker engine
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
       - my-net
