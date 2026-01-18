@@ -1,8 +1,8 @@
 from flask import Flask, render_template
+from datetime import datetime
 
 app = Flask(__name__)
 
-# Static card data so you can render repeating blocks without JavaScript.
 COURSE_CARDS = [
     {"title": "Databases", "icon": "school", "items": []},
     {"title": "Distributed Systems and Security", "icon": "school", "items": []},
@@ -27,9 +27,10 @@ COURSE_CARDS = [
     },
 ]
 
+
 @app.route('/')
 def hello_world():
-    return render_template("index.html", course_cards=COURSE_CARDS)
+    return render_template("index.html", course_cards=COURSE_CARDS, current_year=datetime.now().year)
 
 
 if __name__ == '__main__':
