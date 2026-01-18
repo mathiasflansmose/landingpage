@@ -83,9 +83,9 @@
             <div class="col s12 m6">
                 <div class="card white">
                     <div class="card-content">
-                        <span class="card-title"><i class="material-icons left indigo-text">{{ card.icon }}</i>{{ card.title }}</span>
+                        <span class="card-title"><i class="material-icons left indigo-text">{{ card["icon"] }}</i>{{ card["title"] }}</span>
                         <p><strong>Learning:</strong></p>
-                        {% for item in card.items %}
+                        {% for item in card["items"] %}
                         <p class="grey-text text-darken-1">{{ item }}</p>
                         {% endfor %}
                     </div>

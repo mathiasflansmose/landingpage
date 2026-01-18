@@ -4,20 +4,97 @@ from datetime import datetime
 app = Flask(__name__)
 
 COURSE_CARDS = [
-    {"title": "Databases", "icon": "school", "items": []},
-    {"title": "Distributed Systems and Security", "icon": "school", "items": []},
-    {"title": "Numerical Linear Algebra", "icon": "school", "items": []},
-    {"title": "Software Engineering and Architecture", "icon": "school", "items": []},
-    {"title": "Human-Computer Interaction", "icon": "school", "items": []},
-    {"title": "Introduction to Probability Theory and Statistics", "icon": "school", "items": []},
-    {"title": "Computer Architecture, Networks and Operating Systems", "icon": "school", "items": []},
-    {"title": "Computability and Logic", "icon": "school", "items": []},
-    {"title": "Programming Languages", "icon": "school", "items": []},
-    {"title": "Algorithms and Data Structures", "icon": "school", "items": []},
-    {"title": "Introduction to Mathematics and Optimisation", "icon": "school", "items": []},
     {
-        "title": "Introduction to Programming",
-        "icon": "school",
+        "title": "Databases", 
+        "icon": "school", 
+        "items": [
+            "text...",
+            "text2...",
+        ],
+    },
+    {
+        "title": "Distributed Systems and Security", 
+        "icon": "school", 
+        "items": [
+            "text...",
+            "text2...",
+        ],
+    },
+    {
+        "title": "Numerical Linear Algebra", 
+        "icon": "school", 
+        "items": [
+            "text...",
+            "text2...",
+        ],
+    },
+    {
+        "title": "Software Engineering and Architecture", 
+        "icon": "school", 
+        "items": [
+            "text...",
+            "text2...",
+        ],
+    },
+    {
+        "title": "Human-Computer Interaction", 
+        "icon": "school", 
+        "items": [
+            "text...",
+            "text2...",
+        ],
+    },
+    {
+        "title": "Introduction to Probability Theory and Statistics", 
+        "icon": "school", 
+        "items": [
+            "text...",
+            "text2...",
+        ],
+    },
+    {
+        "title": "Computer Architecture, Networks and Operating Systems", 
+        "icon": "school", 
+        "items": [
+            "text...",
+            "text2...",
+        ],
+    },
+    {
+        "title": "Computability and Logic", 
+        "icon": "school", 
+        "items": [
+            "text...",
+            "text2...",
+        ],
+    },
+    {
+        "title": "Programming Languages", 
+        "icon": "school", 
+        "items": [
+            "text...",
+            "text2...",
+        ],
+    },
+    {
+        "title": "Algorithms and Data Structures", 
+        "icon": "school", 
+        "items": [
+            "text...",
+            "text2...",
+        ],
+    },
+    {
+        "title": "Introduction to Mathematics and Optimisation", 
+        "icon": "school", 
+        "items": [
+            "text...",
+            "text2...",
+        ],
+    },
+    {
+        "title": "Introduction to Programming", 
+        "icon": "school", 
         "items": [
             "Programming concepts and techniques in Java",
             "Program architecture concepts (inheritance, abstract classes, interfaces)",
