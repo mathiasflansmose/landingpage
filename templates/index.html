@@ -42,58 +42,21 @@
 
     <section class="container">
         <div class="row">
-            <div class="col s12 m6">
-                <div class="card white">
-                    <div class="card-content">
-                        <span class="card-title"><i class="material-icons left indigo-text">person</i>About Me</span>
-                        <p>
-                            I am a passionate CS student focusing on algorithms and software architecture. 
-                            I love solving complex problems and turning coffee into clean, efficient code. 
-                        </p>
-                    </div>
+
+        <!-- Course cards  -->
+        {% for card in course_cards %}
+        <div class="col s12 m6">
+            <div class="card white">
+                <div class="card-content">
+                    <span class="card-title"><i class="material-icons left indigo-text">{{ card["icon"] }}</i>{{ card["title"] }}</span>
+                    <p><strong>Learning:</strong></p>
+                    {% for item in card["items"] %}
+                    <p class="grey-text text-darken-1">{{ item }}</p>
+                    {% endfor %}
                 </div>
             </div>
-
-            <div class="col s12 m6">
-                <div class="card white">
-                    <div class="card-content">
-                        <span class="card-title"><i class="material-icons left indigo-text">school</i>Education</span>
-                        <p><strong>Bachelor Computer Science</strong></p>
-                        <p class="grey-text">Aarhus University (2024 - 2027)</p>
-                        <br>
-                        <p><strong>Coursework:</strong></p>
-                        <p class="grey-text text-darken-1">Databases</p>
-                        <p class="grey-text text-darken-1">Distributed Systems and Security</p>
-                        <p class="grey-text text-darken-1">Numerical Linear Algebra</p>
-                        <p class="grey-text text-darken-1">Software Engineering and Architecture</p>
-                        <p class="grey-text text-darken-1">Human-Computer Interaction</p>
-                        <p class="grey-text text-darken-1">Introduction to Probability Theory and Statistics</p>
-                        <p class="grey-text text-darken-1">Computer Architecture, Networks and Operating Systems</p>
-                        <p class="grey-text text-darken-1">Computability and Logic</p>
-                        <p class="grey-text text-darken-1">Programming Languages</p>
-                        <p class="grey-text text-darken-1">Algorithms and Data Structures</p>
-                        <p class="grey-text text-darken-1">Introduction to Mathematics and Optimisation</p>
-                        <p class="grey-text text-darken-1">Introduction to Programming</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Course cards  -->
-            {% for card in course_cards %}
-            <div class="col s12 m6">
-                <div class="card white">
-                    <div class="card-content">
-                        <span class="card-title"><i class="material-icons left indigo-text">{{ card["icon"] }}</i>{{ card["title"] }}</span>
-                        <p><strong>Learning:</strong></p>
-                        {% for item in card["items"] %}
-                        <p class="grey-text text-darken-1">{{ item }}</p>
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-
-
+        </div>
+        {% endfor %}
 
         </div>
     </section>
