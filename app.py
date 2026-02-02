@@ -3,98 +3,82 @@ from datetime import datetime
 
 app = Flask(__name__)
 
-COURSE_CARDS = [
-    {
-        "title": "Databases", 
-        "icon": "school", 
-        "items": [
-            "text...",
-            "text2...",
-        ],
-    },
-    {
-        "title": "Distributed Systems and Security", 
-        "icon": "school", 
-        "items": [
-            "text...",
-            "text2...",
-        ],
-    },
-    {
-        "title": "Numerical Linear Algebra", 
-        "icon": "school", 
-        "items": [
-            "text...",
-            "text2...",
-        ],
-    },
+"""
     {
         "title": "Software Engineering and Architecture", 
-        "icon": "school", 
+        "icon": "code", 
         "items": [
             "text...",
-            "text2...",
         ],
     },
     {
         "title": "Human-Computer Interaction", 
-        "icon": "school", 
+        "icon": "javascript", 
         "items": [
             "text...",
-            "text2...",
         ],
     },
     {
         "title": "Introduction to Probability Theory and Statistics", 
-        "icon": "school", 
+        "icon": "paid", 
         "items": [
             "text...",
-            "text2...",
         ],
     },
     {
         "title": "Computer Architecture, Networks and Operating Systems", 
-        "icon": "school", 
+        "icon": "lan", 
         "items": [
             "text...",
-            "text2...",
         ],
     },
     {
         "title": "Computability and Logic", 
-        "icon": "school", 
+        "icon": "desktop_windows", 
         "items": [
-            "text...",
-            "text2...",
+            "",
         ],
     },
+"""
+
+COURSE_CARDS = [
+
     {
         "title": "Programming Languages", 
-        "icon": "school", 
+        "icon": "data_array", 
         "items": [
-            "text...",
-            "text2...",
+            "Explain characteristic features of programming language paradigms (imperative, functional, and OOP)",
+            "Formalize fundamental programming language features (scoping rules, type systems, state management, higher-order functions, closures, etc.)"
+            "Implement simple language processors (interpreters and compilers)",
+            "Use mathematical and structural induction to reason on recursion and program correctness",
+            "Implement a simple type checker in a mini language (miniscala)",
         ],
     },
     {
         "title": "Algorithms and Data Structures", 
-        "icon": "school", 
+        "icon": "polyline", 
         "items": [
-            "text...",
-            "text2...",
+            "Implement and analyze algorithms using standard algorithm paradigms",
+            "Identify, use and compare data structures and graph algorithms",
+            "Evaluate performance of algorithms",
+            "Analyze and compare the time and space usage of algorithms and data structures",
+            "Identify valid invariants and prove the correctness of simple algorithms",
         ],
     },
     {
         "title": "Introduction to Mathematics and Optimisation", 
-        "icon": "school", 
+        "icon": "functions", 
         "items": [
-            "text...",
-            "text2...",
+            "Perform Gaussian elimination",
+            "Calculat gradient descent with the Hessian matrix",
+            "Work with multidimensional matrices and multivariable calculus",
+            "Apply general and convex optimization on data from examples",
+            "Apply techniques to establish global or local minima for convex functions",
         ],
     },
     {
         "title": "Introduction to Programming", 
-        "icon": "school", 
+        "icon": "notes", 
         "items": [
             "Programming concepts and techniques in Java",
             "Program architecture concepts (inheritance, abstract classes, interfaces)",
