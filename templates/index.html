@@ -40,24 +40,30 @@
         </div>
     </div>
 
-    <section class="container">
+    <!-- COURSES SECTION -->
+    <section class="container" style="margin-top: 40px;">
         <div class="row">
-
-        <!-- Course cards  -->
-        {% for card in course_cards %}
-        <div class="col s12 m6">
-            <div class="card white">
-                <div class="card-content">
-                    <span class="card-title"><i class="material-icons left indigo-text">{{ card["icon"] }}</i>{{ card["title"] }}</span>
-                    <p><strong>Learning:</strong></p>
-                    {% for item in card["items"] %}
-                    <p class="grey-text text-darken-1">{{ item }}</p>
-                    {% endfor %}
-                </div>
+            <div class="col s12 center-align">
+                <h4 class="indigo-text text-darken-2">Courses</h4>
+                <p class="grey-text text-darken-1" style="margin-bottom: 30px;">Computer Science courses I've completed at the Aarhus University</p>
             </div>
         </div>
-        {% endfor %}
-
+        
+        <div class="row">
+            <!-- Course cards  -->
+            {% for card in course_cards %}
+            <div class="col s12 m6 l4">
+                <div class="card white">
+                    <div class="card-content">
+                        <span class="card-title"><i class="material-icons left indigo-text">{{ card["icon"] }}</i>{{ card["title"] }}</span>
+                        <p><strong>Learning:</strong></p>
+                        {% for item in card["items"] %}
+                        <p class="grey-text text-darken-1">• {{ item }}</p>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
         </div>
     </section>
 
