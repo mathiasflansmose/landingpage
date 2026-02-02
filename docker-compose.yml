@@ -8,6 +8,13 @@ services:
       - "80:5000"
     networks:
       - my-net
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+
 
   # The GitHub Runner
   runner:
@@ -29,8 +36,3 @@ networks:
   my-net:
     driver: bridge
 
-logging:
-      driver: "json-file"
-      options:
-        max-size: "10m"
-        max-file: "3"
