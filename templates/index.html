@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mathias Portfolio</title>
+    <title>Mathias Flansmose</title>
     
     <!-- 1. Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -22,78 +22,16 @@
 </head>
 <body>
 
-    <!-- HERO SECTION -->
-    <div class="hero-section center-align">
-        <div class="container">
-            <!-- Replace src with your actual image path -->
-            <img src="{{ url_for('static', filename='profile.png') }}" alt="Profile Picture" class="profile-img">
-            <h1 style="font-weight: 300; margin: 10px 0;">Hello, I'm <span style="font-weight: 500;">Mathias Flansmose </span></h1>
-            <h5 class="light-blue-text text-lighten-4" style="margin-bottom: 30px;">Computer Science Student & Tech Enthusiast</h5>
-            
-            <a href="mailto:mathiasflansmose@gmail.com" class="btn-large waves-effect waves-light pink accent-3 z-depth-2">
-                <i class="material-icons left">email</i>
-                Contact Me
-            </a>
-            <a href="/" class="btn-large waves-effect waves-light transparent z-depth-0" style="border: 1px solid rgba(255,255,255,0.5); margin-left: 10px;">
-                View Work<br>To be implemented
-            </a>
-        </div>
-    </div>
+    {% include 'hero.html' %}
 
-    <!-- COURSES SECTION -->
-    <section class="container" style="margin-top: 40px;">
-        <div class="row">
-            <div class="col s12 center-align">
-                <h4 class="indigo-text text-darken-2">Courses</h4>
-                <p class="grey-text text-darken-1" style="margin-bottom: 30px;">Computer Science courses I've completed at the Aarhus University</p>
-            </div>
-        </div>
-        
-        <div class="row">
-            <!-- Course cards  -->
-            {% for card in course_cards %}
-            <div class="col s12 m6 l4">
-                <div class="card white">
-                    <div class="card-content">
-                        <span class="card-title"><i class="material-icons left indigo-text">{{ card["icon"] }}</i>{{ card["title"] }}</span>
-                        <p><strong>Learning:</strong></p>
-                        {% for item in card["items"] %}
-                        <p class="grey-text text-darken-1">• {{ item }}</p>
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </section>
+    {% include 'about.html' %}
+
+    {% include 'courses.html' %}
+    
+    {% include 'UnderTheHood.html' %}
 
 
-
-
-
-    <!-- CONTACT / FOOTER -->
-    <footer id="contact" class="page-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Let's Connect</h5>
-                </div>
-                <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Links</h5>
-                    <ul>
-                        <li><a class="grey-text text-lighten-3" href="https://dk.linkedin.com/in/mathiasflansmose"><i class="tiny material-icons">link</i> LinkedIn</a></li>
-                        <li><a class="grey-text text-lighten-3" href="https://github.com/mathiasflansmose"><i class="tiny material-icons">code</i> GitHub</a></li>
-                        <li><a class="grey-text text-lighten-3" href="mailto:mathiasflansmose@gmail.com"><i class="tiny material-icons">email</i> Email Me</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright" style="background-color: rgba(0,0,0,0.2);">
-            <div class="container">
-            © {{ current_year }} Mathias Flansmose
-            </div>
-        </div>
-    </footer>
+    {% include 'contact.html' %}
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
