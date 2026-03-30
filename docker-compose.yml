@@ -5,7 +5,7 @@ services:
     container_name: flask_app
     restart: unless-stopped
     ports:
-      - "80:5000"
+      - "5000:5000"
     networks:
       - my-net
     logging:
