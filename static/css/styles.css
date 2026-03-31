@@ -55,3 +55,37 @@ footer.page-footer {
     margin-top: 0;
     padding-top: 20px;
 }
+
+
+
+.typewriter {
+    text-align: center;
+}
+
+.typewriter h1 {
+    display: inline-block;
+    white-space: nowrap;
+    margin: 0 auto;
+}
+
+.typewriter-text {
+    display: inline-block;
+    font-weight: 500;
+}
+
+.typewriter-char {
+    opacity: 0;
+    animation: reveal-char 0.01s linear forwards;
+    animation-delay: calc(var(--i) * 0.12s);
+}
+
+@keyframes reveal-char {
+    to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .typewriter-char {
+        opacity: 1;
+        animation: none;
+    }
+}
