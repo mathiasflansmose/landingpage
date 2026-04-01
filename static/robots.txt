@@ -1,0 +1,25 @@
+# Block the Internet Archive (Wayback Machine)
+User-agent: ia_archiver
+Disallow: /
+
+# Block OpenAI's crawlers (ChatGPT)
+User-agent: GPTBot
+Disallow: /
+User-agent: ChatGPT-User
+Disallow: /
+
+# Block Google's AI training crawler (Google-Extended)
+User-agent: Google-Extended
+Disallow: /
+
+# Block Anthropic's crawler (Claude)
+User-agent: anthropic-ai
+Disallow: /
+
+# Block Common Crawl (the biggest open-source dataset used by many AIs)
+User-agent: CCBot
+Disallow: /
+
+# Allow normal search engines to index the site
+User-agent: *
+Allow: /
