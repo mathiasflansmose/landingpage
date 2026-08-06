@@ -4,7 +4,7 @@ COURSE_CARDS = [
         "icon": "data_array",
         "items": [
             "Explain characteristic features of programming language paradigms (imperative, functional, and OOP)",
-            "Formalize fundamental programming language features (scoping rules, type systems, state management, higher-order functions, closures, etc.)"
+            "Formalize fundamental programming language features (scoping rules, type systems, state management, higher-order functions, closures, etc.)",
             "Implement simple language processors (interpreters and compilers)",
             "Use mathematical and structural induction to reason on recursion and program correctness",
             "Implement a simple type checker in a mini language (miniscala)",
